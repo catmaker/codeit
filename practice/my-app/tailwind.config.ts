@@ -13,14 +13,25 @@ export default {
         foreground: "var(--foreground)",
       },
       animation: {
-        "scroll-slow": "scroll 40s linear infinite",
-        "scroll-medium": "scroll 50s linear infinite",
-        "scroll-fast": "scroll 43s linear infinite",
+        "scroll-slow": "scroll 80s linear infinite",
+        "scroll-medium": "scroll 70s linear infinite",
+        "scroll-fast": "scroll 60s linear infinite",
+        "fade-in": "fadeIn 0.5s ease-in-out",
+        "spin-reverse-slower": "spin-reverse 10s linear infinite",
+        "spin-slower": "spin 8s linear infinite",
       },
       keyframes: {
         scroll: {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(-50%)" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "spin-reverse": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
         },
       },
     },

@@ -18,8 +18,10 @@ const TestimonialSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-8 mt-16">
+      <div className="grid grid-cols-3 gap-8 mt-16 max-w-7xl mx-auto">
         <div className="relative h-[600px] overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent z-10 animate-fade-in" />
+
           <div className="animate-scroll-slow flex flex-col gap-6">
             {TESTIMONIALS1.map((testimonial) => (
               <ReviewBox
@@ -30,14 +32,32 @@ const TestimonialSection = () => {
                 author={testimonial.author}
               />
             ))}
+            {TESTIMONIALS1.map((testimonial) => (
+              <ReviewBox
+                key={testimonial.title}
+                rating={testimonial.rating}
+                title={testimonial.title}
+                content={testimonial.content}
+                author={testimonial.author}
+              />
+            ))}
           </div>
-        </div>
 
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10 animate-fade-in" />
+        </div>
         <div className="relative h-[600px] overflow-hidden">
-          <div
-            className="animate-scroll-medium flex flex-col gap-6"
-            style={{ animationDelay: "-5s" }}
-          >
+          <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent z-10 animate-fade-in" />
+
+          <div className="animate-scroll-fast flex flex-col gap-6">
+            {TESTIMONIALS2.map((testimonial) => (
+              <ReviewBox
+                key={testimonial.title}
+                rating={testimonial.rating}
+                title={testimonial.title}
+                content={testimonial.content}
+                author={testimonial.author}
+              />
+            ))}
             {TESTIMONIALS2.map((testimonial) => (
               <ReviewBox
                 key={testimonial.title}
@@ -48,13 +68,22 @@ const TestimonialSection = () => {
               />
             ))}
           </div>
-        </div>
 
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10 animate-fade-in" />
+        </div>
         <div className="relative h-[600px] overflow-hidden">
-          <div
-            className="animate-scroll-fast flex flex-col gap-6"
-            style={{ animationDelay: "-2s" }}
-          >
+          <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent z-10 animate-fade-in" />
+
+          <div className="animate-scroll-medium flex flex-col gap-6">
+            {TESTIMONIALS3.map((testimonial) => (
+              <ReviewBox
+                key={testimonial.title}
+                rating={testimonial.rating}
+                title={testimonial.title}
+                content={testimonial.content}
+                author={testimonial.author}
+              />
+            ))}
             {TESTIMONIALS3.map((testimonial) => (
               <ReviewBox
                 key={testimonial.title}
@@ -65,6 +94,8 @@ const TestimonialSection = () => {
               />
             ))}
           </div>
+
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent z-10 animate-fade-in" />
         </div>
       </div>
     </section>

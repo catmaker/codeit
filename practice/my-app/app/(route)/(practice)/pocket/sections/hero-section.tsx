@@ -2,10 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { logos } from "@/constants/logos";
-
+import HeroCircleComponent from "../components/hero/circle";
 const Hero = () => {
   return (
-    <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+    <div className="relative overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
+      <div className="absolute right-[1000px] top-2 -translate-y-1/2">
+        <HeroCircleComponent className="w-[700px] h-[700px]" />
+      </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
@@ -51,12 +54,12 @@ const Hero = () => {
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
-            <div className="flex justify-center lg:justify-end">
+            <div className="relative flex justify-center lg:justify-end items-center">
               <Image
                 src="/assets/hero.png"
                 alt="hero-image-1"
-                width={400}
-                height={400}
+                width={300}
+                height={300}
                 className="rounded-lg"
               />
             </div>
